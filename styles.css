@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+body{
+    background: linear-gradient(0deg, #e94b3cff 50%, rgb(198, 161, 188));
+}
+
+.header-logo {
+    align-items: flex-start;
+    display: flex;
+    left: 30px;
+    position: absolute;
+    top: 30px;
+}
+
+.principal {
+    height: 95vh;
+}
+
+.botones {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+    justify-content: center;
+}
+
+.boton-jugar {
+    background: #2d2926ff;
+    border-radius: 33px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 38px;
+    width: 317px;
+}
+
+.btn-nPalabra {
+    background: #575350;
+    border: none;
+    border-radius: 33px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 24px;
+    width: 284px;
+}
+
+.footer {
+    background: linear-gradient(0deg, rgb(198, 161, 188)25%, #e94b3cff);
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+}
+
+
+
+
+
+
+.pagina-juego {
+    height: 85vh;
+}
+
+.box_juego {
+    height: 100%;
+}
+
+.ahorcado_box {
+    margin: 6rem auto 4rem auto;
+    text-align: center;
+    width: 20rem;
+    height: 25rem;
+}
+
+#ahorcado {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.letra-acertada {
+    color: #fff;
+    display: flex;
+    font-size: 1.8rem;
+    justify-content: center;
+}
+
+#words {
+    color: transparent;
+    outline: none;
+    border: none;
+    background: transparent;
+    position: relative;
+    bottom: 3rem;
+    height: 2rem;
+    left: 1rem;
+    width: 90%;
+}
+
+.word {
+    text-align: center;
+    margin: 15px;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.guessed {
+    padding: 1rem;
+    border-bottom: 3px solid #fff;
+}
+
+.letra-error {
+    color: #822297;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.box_botones {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.boton-nuevo {
+    background: #2d2926ff;
+    border: none;
+    border-radius: 33px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 19px;
+    height: 67px;
+    width: 332px;
+}
+
+.boton-salir {
+    background: #575350;
+    border: none;
+    border-radius: 33px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    height: 67px;
+    line-height: 19px;
+    width: 332px;
+}
+
+.info_gano {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(16, 103, 16, 0.85);
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.info_gano--show {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.info_box {
+    background-color: #f3f5f6;
+    border-radius: 20px;
+    color: #2d2926ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 10rem;
+    margin: 15em auto;
+    padding: 2em 1.5em;
+    text-align: center;
+    width: 30%;
+    backdrop-filter: blur(10px);
+}
+
+.info_titulo {
+    font-size: 2.5rem;
+}
+
+.info_parrafo {
+    font-size: 1.5rem;
+    margin: 25px 0;
+    color: #495057;
+}
+
+
+.info_ok,
+.info_ok--end {
+    background: #2d2926ff;
+    border-radius: 20px;
+    color: #fff;
+    margin: 0 auto;
+    padding: 1em 2em;
+    text-decoration: none;
+    width: 10%;
+}
+
+.info_perdio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ff0000bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.info_perdio--show {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+
+
+
+
+
+
+.pagina-agregar {
+    font-family: 'Roboto Slab', serif;
+    height: 95vh;
+}
+
+.box_agregar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#agregar_palabra {
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    height: 15em;
+    margin: 200px auto 0 auto;
+    resize: none;
+    outline: none;
+}
+
+#agregar_palabra::placeholder {
+    text-align: center;
+    color: #fff;
+}
+
+.max__letters {
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.botones_agregar {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 200px;
+}
+
+.boton_guardar {
+    background: #2d2926ff;
+    border: none;
+    border-radius: 33px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 19px;
+    height: 67px;
+    width: 332px;
+}
+
+.boton_cancelar {
+    background: #575350;
+    color: #fff;
+    border: none;
+    border-radius: 33px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 67px;
+    line-height: 19px;
+    width: 332px;
+}
+
+
+
+
+@media (max-width: 700px) {
+    .botones_agregar {
+        flex-direction: column;
+        gap: 15px;
+    }  
+}    
+
+@media (max-width: 600px) {
+
+    .pagina-juego {
+        margin-bottom: 1.5rem;
+    }
+
+    .box_juego {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ahorcado_box {
+        margin-bottom: 3rem;
+        margin-top: 8rem;
+    }
+
+    #ahorcado {
+        width: 85%;
+    }
+
+    .word {
+        font-size: 1.4rem;
+        margin: 10px;
+        width: .8rem;
+    }
+
+    .guessed {
+        padding: .8rem;
+    }
+
+    .box_botones {
+        flex-direction: column;
+        gap: .8rem;
+        margin-bottom: 10px;
+        margin-top: 0;
+        width: 85%;
+    }
+
+    .boton-nuevo,
+    .boton-salir {
+        width: 100%;
+    }
+
+    .info_box {
+        width: 45%;
+    }
+
+    .info_titulo {
+        font-size: 2.2rem;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 550px) {
+
+    .principal {
+        height: 93vh;
+    }
+
+    .header-logo {
+        left: 20px;
+    }
+
+    .botones {
+        gap: 1rem;
+    }
+
+    .boton-jugar {
+        width: 257px;
+    }
+
+    .btn-nPalabra {
+        font-size: 14px;
+        width: max-content;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    #agregar_palabra {
+        height: 55vh;
+        margin: 140px 0 0;
+        width: 25rem;
+    }
+
+    .botones_agregar {
+        flex-direction: column;
+        width: 25rem;
+        margin-bottom: 30px;
+    }
+
+    .boton_guardar,
+    .boton_cancelar {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 400px) {
+
+    #agregar_palabra {
+        margin-top: 120px;
+        width: 85%;
+    }
+
+    .max__letters {
+        font-size: .8rem;
+        width: 55%;
+    }
+
+    .botones_agregar {
+        font-size: .8rem;
+        gap: 14px;
+        width: 85%;
+    }
+
+    .boton_guardar,
+    .boton_cancelar {
+        font-size: .8rem;
+        height: 60px;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 350px) {
+
+    .ahorcado_box {
+        width: 80%;
+    }
+
+    .word {
+        font-size: 1rem;
+        margin: 6px;
+        width: .5rem;
+    }
+
+    .guessed {
+        padding: .5rem;
+    }
+
+    #words {
+        width: 80%;
+    }
+
+    .info_box {
+        width: 55%;
+    }
+
+    .info_titulo {
+        font-size: 1.7rem;
+    }
+}

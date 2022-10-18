@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHORCADO ALURA</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header-logo">
+      <img src="./images/logo.png" alt="Logo Alura">
+    </header>
+
+    <section class="principal">
+      <div class="botones">
+        <button class="boton-jugar">JUGAR</button>
+        <button class="btn-nPalabra">Añadir una Palabra Nueva</button>
+      </div>
+    </section>
+
+    <section class="pagina-juego">
+      <div class="box_juego">
+        <div class="ahorcado_box">
+          <img id="ahorcado" alt="ahorcado">
+        </div>
+        <div class="letra-acertada"></div>
+        <input type="text" id="words" onkeyup="guessLetter(this.value)">
+        <div class="letra-error"></div>
+        <div class="box_botones">
+          <button class="boton-nuevo">Nuevo Juego</button>
+          <button class="boton-salir">Salir</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="info_gano">
+      <div class="info_box">
+        <h2 class="info_titulo">Acertaste!</h2>
+        <p class="info_parrafo">Continuar jugando</p>
+        <a href="#" class="info_ok">OK</a>
+      </div>
+    </section>
+
+    <section class="info_perdio">
+      <div class="info_box">
+        <h2 class="info_titulo">Ahorcado!</h2>
+        <p class="info_parrafo" id="end"></p>
+        <a href="#" class="info_ok--end">OK</a>
+      </div>
+    </section>
+
+    <section class="pagina-agregar">
+      <div class="box_agregar">
+        <textarea type="text" id="agregar_palabra" placeholder="Ingrese una palabra" onkeypress="return (event.charCode == 32 || event.charCode == 209 || event.charCode == 241 || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"></textarea>
+        <div class="max__letters">
+          <p>&#9432; Máximo de 8 Letras</p>
+        </div>
+        <div class="botones_agregar">
+          <button class="boton_guardar">Guardar y Empezar</button>
+          <button class="boton_cancelar">Cancelar</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <p>&#169; Dante Ezequiel Bringa</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
