@@ -22,7 +22,6 @@ btnSalir.onclick = salir;
 btnGuardar.onclick = guardar;
 btnCancelar.onclick = cancelar;
 
-// Generar palabra aleatoria y cambiar a la seccion de juego
 function alearorio() {
   var localRandom = Math.floor(Math.random() * newWords.length);
   var rWords = newWords[localRandom].toUpperCase();
@@ -41,7 +40,6 @@ function agregarPalabra() {
   document.querySelector(".pagina-agregar").style.display = "block";
 }
 
-// Restablecer el juego
 function nuevoJuego() {
   alearorio();
   gameHorca.state = 8;
@@ -80,13 +78,6 @@ function cancelar() {
   document.querySelector(".pagina-agregar").style.display = "none";
 }
 
-
-
-
-
-
-
-
 var gameHorca = {
   state: 8,
   guessed: [],
@@ -110,7 +101,7 @@ function dibujo(gameHorca) {
     state = gameHorca.previus;
   }
   $elem.src = "./images/intent0" + state + ".png";
-  // Crear letras adivinadas
+ 
   $elem = $html.guessed;
   var guessed = gameHorca.guessed;
   var secretWord = gameHorca.secretWord;
@@ -125,7 +116,6 @@ function dibujo(gameHorca) {
     $span.appendChild($text);
     $elem.appendChild($span);
   }
-  // Crear letras equivocadas
   var wrong = gameHorca.wrong;
   $elem = $html.wrong;
   $elem.innerHTML = "";
@@ -144,8 +134,6 @@ function adivinar(gameHorca, letter) {
   if (state === 1 || state === 9) {
     return;
   }
-
-  // Actualizar estado
 
   var guessed = gameHorca.guessed;
   var wrong = gameHorca.wrong;
@@ -172,8 +160,6 @@ function adivinar(gameHorca, letter) {
   }
 }
 
-// Obtener letras de input
-
 function obtenerLetra(texto) {
   document.getElementById("words").texto;
   var text = texto.charAt(texto.length - 1);
@@ -195,8 +181,6 @@ function obtenerLetra(texto) {
     document.getElementById("words").value = "";
   }
 }
-
-// Obtener letra presionada en el teclado
 
 window.onkeypress = function obtenerLetra(e) {
   var letter = e.key;

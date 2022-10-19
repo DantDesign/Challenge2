@@ -59,11 +59,6 @@ body{
     justify-content: center;
 }
 
-
-
-
-
-
 .pagina-juego {
     height: 85vh;
 }
@@ -197,7 +192,6 @@ body{
     color: #495057;
 }
 
-
 .info_ok,
 .info_ok--end {
     background: #2d2926ff;
@@ -225,12 +219,6 @@ body{
     opacity: 1;
     pointer-events: unset;
 }
-
-
-
-
-
-
 
 .pagina-agregar {
     font-family: 'Roboto Slab', serif;
@@ -297,8 +285,6 @@ body{
 }
 
 
-
-
 @media (max-width: 700px) {
     .botones_agregar {
         flex-direction: column;
@@ -359,11 +345,6 @@ body{
     }
 }
 
-
-
-
-
-
 @media (max-width: 550px) {
 
     .principal {
@@ -409,16 +390,6 @@ body{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 400px) {
 
     #agregar_palabra {
@@ -443,12 +414,6 @@ body{
         height: 60px;
     }
 }
-
-
-
-
-
-
 
 @media (max-width: 350px) {
 
