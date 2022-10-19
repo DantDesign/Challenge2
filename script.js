@@ -92,7 +92,7 @@ var $html = {
 };
 
 function dibujo(gameHorca) {
-  // Actualizar imagen del ahorcado
+
   var $elem;
   $elem = $html.ahorcado;
 
@@ -169,7 +169,6 @@ function obtenerLetra(texto) {
     dibujo(gameHorca);
   }
 
-  // Mostrar gando o perdido
   var state = gameHorca.state;
   if (state === 9) {
     gano();
@@ -186,7 +185,7 @@ window.onkeypress = function obtenerLetra(e) {
   var letter = e.key;
   letter = letter.toUpperCase();
   if (/^[A-zÑñ]*$/.test(letter)) {
-    // console.log(letter);
+    
     adivinar(gameHorca, letter);
     dibujo(gameHorca);
   }
